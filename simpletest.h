@@ -164,7 +164,7 @@ protected:
 	char myMessageSpace[MESSAGE_SPACE];
 
 	// allow access to current test outside of main code block
-	static thread_local TestFixture* ourCurrentTest;
+	static TestFixture* ourCurrentTest;
 };
 
 //---------------------------------------------------------------------------------

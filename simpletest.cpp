@@ -12,7 +12,7 @@ void DefaultPrint(char const* string) { printf("%s", string); }
 
 TestFixture* TestFixture::ourFirstTest;
 TestFixture* TestFixture::ourLastTest;
-thread_local TestFixture* TestFixture::ourCurrentTest;
+TestFixture* TestFixture::ourCurrentTest;
 void (*TestFixture::Print)(char const* string) = DefaultPrint;
 
 //---------------------------------------------------------------------------------
