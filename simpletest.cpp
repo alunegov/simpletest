@@ -87,7 +87,7 @@ TempString TypeToString(unsigned long long value)
 TempString TypeToString(float value)
 {
 	TempString tempString;
-	snprintf(tempString.myTextBuffer, STRING_LENGTH, "%.16g", value);
+	snprintf(tempString.myTextBuffer, STRING_LENGTH, "%.16g", (double)value);
 	return tempString;
 }
 TempString TypeToString(double value)
@@ -314,7 +314,7 @@ static bool locExecuteTest(TestFixture* test, TestFixture::OutputMode output)
 		if (output == TestFixture::Verbose)
 		{
 			clock_t end = clock();
-			TestFixture::Printf(": Passed %d out of %d tests in %g seconds\n", test->NumTests(), test->NumTests(), float(end - start) / (float)CLOCKS_PER_SEC);
+			TestFixture::Printf(": Passed %d out of %d tests in %g seconds\n", test->NumTests(), test->NumTests(), (double)(float(end - start) / (float)CLOCKS_PER_SEC));
 		}
 		return true;
 	}
