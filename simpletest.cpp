@@ -336,7 +336,7 @@ static bool locExecuteTest(TestFixture* test, TestFixture::OutputMode output)
 }
 void TestFixture::Printf(char const* string, ...)
 {
-	char tempSpace[4096];
+	char tempSpace[200];
 	va_list args;
 
 	va_start(args, string);
